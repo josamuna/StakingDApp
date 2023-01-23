@@ -1,0 +1,32 @@
+{
+  "name": "stakingdapp",
+  "version": "1.0.0",
+  "description": "Staking DApp Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/josamuna/StakingDApp.git"
+  },
+  "author": "Josue Isamuna Nkembo <josamuna2009@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/josamuna/StakingDApp/issues"
+  },
+  "homepage": "https://github.com/josamuna/StakingDApp#readme",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.2.2",
+    "dotenv": "^16.0.3",
+    "hardhat": "^2.12.6",
+    "hardhat-contract-sizer": "^2.7.0",
+    "hardhat-deploy": "^0.11.22",
+    "hardhat-deploy-ethers": "^0.3.0-beta.13",
+    "hardhat-gas-reporter": "^1.0.9"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "@nomiclabs/hardhat-etherscan": "^3.1.5"
+  }
+}
