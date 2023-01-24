@@ -42,26 +42,30 @@ function StakeForm() {
   }
 
   async function handleApproveSuccess(amountToStakeFormatted) {
-    stakeOptions.params = {
-      amount: amountToStakeFormatted,
-    };
+    try {
+      stakeOptions.params = {
+        amount: amountToStakeFormatted,
+      };
 
-    const tx = await runContractFunction({
-      params: stakeOptions,
-      onError: (error) => console.log(error),
-    });
+      const tx = await runContractFunction({
+        params: stakeOptions,
+        onError: (error) => console.log(error),
+      });
 
-    await TreeWalker.await(0);
-    console.log("Stake transaction complete");
+      await tx.wait();
+      console.log("Stake transaction complete");
+    } catch (error) {
+      console.log(error);
+    }
   }
 
   return (
-    <div className="text-black">
+    <div>
       <Form
         onSubmit={handleStakeSubmit}
         data={[
           {
-            inputWidth: "50%",
+            inputWidth: "60%",
             name: "Amount to stake",
             type: "number",
             value: "",
